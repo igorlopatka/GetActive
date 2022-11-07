@@ -14,6 +14,7 @@
 		450045F72912FC6000D9BDEC /* GetActiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450045F62912FC6000D9BDEC /* GetActiveTests.swift */; };
 		450046012912FC6000D9BDEC /* GetActiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450046002912FC6000D9BDEC /* GetActiveUITests.swift */; };
 		450046032912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450046022912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift */; };
+		4576A07229198D9E0008FDF9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576A07129198D9E0008FDF9 /* LocationManager.swift */; };
 		45A19DB12919537600771F33 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A19DB02919537600771F33 /* ActivityView.swift */; };
 		45A19DB42919550300771F33 /* ActivityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A19DB32919550300771F33 /* ActivityDetailsView.swift */; };
 		45A19DB62919564800771F33 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A19DB52919564800771F33 /* ProfileView.swift */; };
@@ -49,6 +50,8 @@
 		450045FC2912FC6000D9BDEC /* GetActiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetActiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450046002912FC6000D9BDEC /* GetActiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActiveUITests.swift; sourceTree = "<group>"; };
 		450046022912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4576A07129198D9E0008FDF9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4576A07329198E7D0008FDF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		45A19DB02919537600771F33 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		45A19DB32919550300771F33 /* ActivityDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsView.swift; sourceTree = "<group>"; };
 		45A19DB52919564800771F33 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -104,8 +107,10 @@
 		450045E42912FC5F00D9BDEC /* GetActive */ = {
 			isa = PBXGroup;
 			children = (
+				4576A07329198E7D0008FDF9 /* Info.plist */,
 				450045E52912FC5F00D9BDEC /* GetActiveApp.swift */,
 				450045E72912FC5F00D9BDEC /* ContentView.swift */,
+				4576A07129198D9E0008FDF9 /* LocationManager.swift */,
 				45A19DB2291953B500771F33 /* Views */,
 				450045E92912FC6000D9BDEC /* Assets.xcassets */,
 				450045EB2912FC6000D9BDEC /* Preview Content */,
@@ -284,6 +289,7 @@
 				450045E62912FC5F00D9BDEC /* GetActiveApp.swift in Sources */,
 				45A19DB62919564800771F33 /* ProfileView.swift in Sources */,
 				45A19DB82919565100771F33 /* SettingsView.swift in Sources */,
+				4576A07229198D9E0008FDF9 /* LocationManager.swift in Sources */,
 				45A19DBA2919566100771F33 /* ActivityHistoryView.swift in Sources */,
 				45A19DB42919550300771F33 /* ActivityDetailsView.swift in Sources */,
 				45A19DB12919537600771F33 /* ActivityView.swift in Sources */,
@@ -448,6 +454,8 @@
 				DEVELOPMENT_TEAM = 6A7T62L69W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetActive/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access for Activity Tracking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,6 +485,8 @@
 				DEVELOPMENT_TEAM = 6A7T62L69W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetActive/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow access for Activity Tracking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
