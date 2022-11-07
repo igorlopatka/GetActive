@@ -12,20 +12,15 @@ import SwiftUI
 struct ActivityView: View {
     
     @State private var showingDetails = true
-    @State private var region = MKCoordinateRegion(
-        center:  CLLocationCoordinate2D(
-          latitude: 37.789467,
-          longitude:-122.416772
-        ),
-        span: MKCoordinateSpan(
-          latitudeDelta: 0.5,
-          longitudeDelta: 0.5
-       )
-    )
+    @State private var trackingMode = MapUserTrackingMode.follow
+    @StateObject var locationManager = LocationManager()
     
     var body: some View {
         NavigationView {
-            Map(coordinateRegion: $region)
+            Map(coordinateRegion: $locationManager.region,
+                interactionModes: .pan,
+                showsUserLocation: true,
+                userTrackingMode: $trackingMode)
                 .ignoresSafeArea()
                 .navigationTitle("Get Active")
         }
