@@ -11,7 +11,8 @@ import SwiftUI
 
 struct ActivityView: View {
     
-    @State var region = MKCoordinateRegion(
+    @State private var showingDetails = true
+    @State private var region = MKCoordinateRegion(
         center:  CLLocationCoordinate2D(
           latitude: 37.789467,
           longitude:-122.416772
@@ -25,7 +26,13 @@ struct ActivityView: View {
     var body: some View {
         NavigationView {
             Map(coordinateRegion: $region)
+                .ignoresSafeArea()
+                .navigationTitle("Get Active")
         }
+        .sheet(isPresented: $showingDetails) {
+                    ActivityDetailsView()
+                .presentationDetents([.height(200), .medium, .large])
+                }
     }
 }
 
