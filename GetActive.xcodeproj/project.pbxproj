@@ -26,6 +26,9 @@
 		45ACB89A291C32EB007A75F4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 45ACB899291C32EB007A75F4 /* FirebaseAnalytics */; };
 		45ACB89C291C32EB007A75F4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 45ACB89B291C32EB007A75F4 /* FirebaseAuth */; };
 		45ACB89E291C32EB007A75F4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 45ACB89D291C32EB007A75F4 /* FirebaseFirestore */; };
+		45ACB8A0291C36D6007A75F4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB89F291C36D6007A75F4 /* ViewRouter.swift */; };
+		45ACB8A1291C36D6007A75F4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB89F291C36D6007A75F4 /* ViewRouter.swift */; };
+		45ACB8A2291C36D6007A75F4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB89F291C36D6007A75F4 /* ViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,7 @@
 		45A19DB72919565100771F33 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		45A19DB92919566100771F33 /* ActivityHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHistoryView.swift; sourceTree = "<group>"; };
 		45ACB894291C320A007A75F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45ACB89F291C36D6007A75F4 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 				45ACB894291C320A007A75F4 /* GoogleService-Info.plist */,
 				4576A07329198E7D0008FDF9 /* Info.plist */,
 				450045E52912FC5F00D9BDEC /* GetActiveApp.swift */,
+				45ACB89F291C36D6007A75F4 /* ViewRouter.swift */,
 				4576A07129198D9E0008FDF9 /* LocationManager.swift */,
 				45A19DB2291953B500771F33 /* Views */,
 				450045E92912FC6000D9BDEC /* Assets.xcassets */,
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ACB8A0291C36D6007A75F4 /* ViewRouter.swift in Sources */,
 				450045E82912FC5F00D9BDEC /* ContentView.swift in Sources */,
 				450045E62912FC5F00D9BDEC /* GetActiveApp.swift in Sources */,
 				45A19DB62919564800771F33 /* ProfileView.swift in Sources */,
@@ -323,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				450045F72912FC6000D9BDEC /* GetActiveTests.swift in Sources */,
+				45ACB8A1291C36D6007A75F4 /* ViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ACB8A2291C36D6007A75F4 /* ViewRouter.swift in Sources */,
 				450046012912FC6000D9BDEC /* GetActiveUITests.swift in Sources */,
 				450046032912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift in Sources */,
 			);
