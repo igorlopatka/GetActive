@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/swift,swiftpackagemanager,firebase,xcode,fastlane
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,swiftpackagemanager,firebase,xcode,fastlane
 
+plist
+.plist
+
 ### fastlane ###
 # fastlane - A streamlined workflow tool for Cocoa deployment
 #

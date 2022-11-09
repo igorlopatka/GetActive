@@ -16,18 +16,21 @@ struct ActivityView: View {
     @StateObject var locationManager = LocationManager()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Map(coordinateRegion: $locationManager.region,
                 interactionModes: .pan,
                 showsUserLocation: true,
                 userTrackingMode: $trackingMode)
-                .ignoresSafeArea()
-                .navigationTitle("Get Active")
+            .ignoresSafeArea()
+            .navigationTitle("Get Active")
+//            .toolbarBackground(.visible, for: .navigationBar)
         }
         .sheet(isPresented: $showingDetails) {
-                    ActivityDetailsView()
-                .presentationDetents([.height(200), .medium, .large])
-                }
+            ActivityDetailsView()
+                .presentationDetents([
+                    .height(200),
+                    .medium])
+        }
     }
 }
 
