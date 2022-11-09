@@ -2,7 +2,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,swiftpackagemanager,firebase,xcode,fastlane
 
 plist
-.plist
+*.plist
+GoogleService-Info.plist
 
 ### fastlane ###
 # fastlane - A streamlined workflow tool for Cocoa deployment
