@@ -5,6 +5,7 @@
 //  Created by Igor Łopatka on 09/11/2022.
 //
 
+import Firebase
 import SwiftUI
 
 struct RegistrationView: View {

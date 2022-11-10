@@ -5,6 +5,7 @@
 //  Created by Igor Łopatka on 07/11/2022.
 //
 
+import Firebase
 import MapKit
 import SwiftUI
 
