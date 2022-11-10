@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
-        ActivityView()
+        switch viewRouter.currentPage {
+        case .signUpPage:
+            RegistrationView()
+        case .signInPage:
+            LoginView()
+        case .homePage:
+            ActivityView()
+        }
     }
 }
 
