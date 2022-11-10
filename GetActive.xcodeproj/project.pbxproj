@@ -29,12 +29,12 @@
 		45ACB8A0291C36D6007A75F4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB89F291C36D6007A75F4 /* ViewRouter.swift */; };
 		45ACB8A1291C36D6007A75F4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB89F291C36D6007A75F4 /* ViewRouter.swift */; };
 		45ACB8A2291C36D6007A75F4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB89F291C36D6007A75F4 /* ViewRouter.swift */; };
-		45ACB8A4291C380B007A75F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A3291C380B007A75F4 /* LoginView.swift */; };
-		45ACB8A5291C380B007A75F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A3291C380B007A75F4 /* LoginView.swift */; };
-		45ACB8A6291C380B007A75F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A3291C380B007A75F4 /* LoginView.swift */; };
-		45ACB8A8291C3818007A75F4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* RegistrationView.swift */; };
-		45ACB8A9291C3818007A75F4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* RegistrationView.swift */; };
-		45ACB8AA291C3818007A75F4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* RegistrationView.swift */; };
+		45ACB8A4291C380B007A75F4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A3291C380B007A75F4 /* SignInView.swift */; };
+		45ACB8A5291C380B007A75F4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A3291C380B007A75F4 /* SignInView.swift */; };
+		45ACB8A6291C380B007A75F4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A3291C380B007A75F4 /* SignInView.swift */; };
+		45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
+		45ACB8A9291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
+		45ACB8AA291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +74,8 @@
 		45A19DB92919566100771F33 /* ActivityHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHistoryView.swift; sourceTree = "<group>"; };
 		45ACB894291C320A007A75F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45ACB89F291C36D6007A75F4 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		45ACB8A3291C380B007A75F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		45ACB8A7291C3818007A75F4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		45ACB8A3291C380B007A75F4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		45ACB8A7291C3818007A75F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +175,8 @@
 				45A19DB92919566100771F33 /* ActivityHistoryView.swift */,
 				45A19DB72919565100771F33 /* SettingsView.swift */,
 				45A19DB52919564800771F33 /* ProfileView.swift */,
-				45ACB8A3291C380B007A75F4 /* LoginView.swift */,
-				45ACB8A7291C3818007A75F4 /* RegistrationView.swift */,
+				45ACB8A3291C380B007A75F4 /* SignInView.swift */,
+				45ACB8A7291C3818007A75F4 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45ACB8A8291C3818007A75F4 /* RegistrationView.swift in Sources */,
+				45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */,
 				45ACB8A0291C36D6007A75F4 /* ViewRouter.swift in Sources */,
 				450045E82912FC5F00D9BDEC /* ContentView.swift in Sources */,
 				450045E62912FC5F00D9BDEC /* GetActiveApp.swift in Sources */,
@@ -331,7 +331,7 @@
 				4576A07229198D9E0008FDF9 /* LocationManager.swift in Sources */,
 				45A19DBA2919566100771F33 /* ActivityHistoryView.swift in Sources */,
 				45A19DB42919550300771F33 /* ActivityDetailsView.swift in Sources */,
-				45ACB8A4291C380B007A75F4 /* LoginView.swift in Sources */,
+				45ACB8A4291C380B007A75F4 /* SignInView.swift in Sources */,
 				45A19DB12919537600771F33 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,8 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45ACB8A5291C380B007A75F4 /* LoginView.swift in Sources */,
-				45ACB8A9291C3818007A75F4 /* RegistrationView.swift in Sources */,
+				45ACB8A5291C380B007A75F4 /* SignInView.swift in Sources */,
+				45ACB8A9291C3818007A75F4 /* SignUpView.swift in Sources */,
 				450045F72912FC6000D9BDEC /* GetActiveTests.swift in Sources */,
 				45ACB8A1291C36D6007A75F4 /* ViewRouter.swift in Sources */,
 			);
@@ -352,9 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ACB8A2291C36D6007A75F4 /* ViewRouter.swift in Sources */,
-				45ACB8AA291C3818007A75F4 /* RegistrationView.swift in Sources */,
+				45ACB8AA291C3818007A75F4 /* SignUpView.swift in Sources */,
 				450046012912FC6000D9BDEC /* GetActiveUITests.swift in Sources */,
-				45ACB8A6291C380B007A75F4 /* LoginView.swift in Sources */,
+				45ACB8A6291C380B007A75F4 /* SignInView.swift in Sources */,
 				450046032912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

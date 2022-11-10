@@ -8,7 +8,7 @@
 import Firebase
 import SwiftUI
 
-struct RegistrationView: View {
+struct SignUpView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
@@ -16,13 +16,15 @@ struct RegistrationView: View {
     @State private var password = ""
     @State private var passwordConfirmation = ""
     
+    @State private var signUpProcessing = false
+    
     var body: some View {
         VStack(spacing: 15) {
             SignUpCredentialFields(email: $email,
                                    password: $password,
                                    passwordConfirmation: $passwordConfirmation)
             Button {
-                // authenticate
+                signUpUser(userEmail: email, userPassword: password)
             } label: {
                 Text("Sign Up")
                     .bold()
@@ -30,6 +32,7 @@ struct RegistrationView: View {
                     .background(.thinMaterial)
                     .cornerRadius(10)
             }
+            .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
             Spacer()
             HStack {
                 Text("Already have an account?")
@@ -41,12 +44,34 @@ struct RegistrationView: View {
             }
             .opacity(0.9)
         }
+        .padding()
+    }
+    
+    func signUpUser(userEmail: String, userPassword: String) {
+        
+        signUpProcessing = true
+        Auth.auth().createUser(withEmail: userEmail, password: userPassword) { authResult, error in
+            guard error == nil else {
+                signUpProcessing = false
+                return
+            }
+            
+            switch authResult {
+            case .none:
+                print("Could not create account.")
+                signUpProcessing = false
+            case .some(_):
+                print("User created")
+                signUpProcessing = false
+                viewRouter.currentPage = .homePage
+            }
+        }
     }
 }
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView()
+        SignUpView()
     }
 }
 

@@ -14,9 +14,9 @@ struct ContentView: View {
     var body: some View {
         switch viewRouter.currentPage {
         case .signUpPage:
-            RegistrationView()
+            SignUpView()
         case .signInPage:
-            LoginView()
+            SignInView()
         case .homePage:
             ActivityView()
         }

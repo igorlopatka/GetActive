@@ -8,7 +8,7 @@
 import Firebase
 import SwiftUI
 
-struct LoginView: View {
+struct SignInView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
@@ -44,7 +44,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        SignInView()
     }
 }
 
