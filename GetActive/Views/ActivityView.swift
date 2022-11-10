@@ -12,9 +12,13 @@ import SwiftUI
 
 struct ActivityView: View {
     
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State private var showingDetails = true
     @State private var trackingMode = MapUserTrackingMode.follow
     @StateObject var locationManager = LocationManager()
+    
+    @State private var signOutProcessing = false
     
     var body: some View {
         NavigationStack {
@@ -24,13 +28,37 @@ struct ActivityView: View {
                 userTrackingMode: $trackingMode)
             .ignoresSafeArea()
             .navigationTitle("Get Active")
-//            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if signOutProcessing {
+                        ProgressView()
+                    } else {
+                        Button("Sign Out") {
+                            signOutUser()
+                        }
+                    }
+                }
+            }
         }
         .sheet(isPresented: $showingDetails) {
             ActivityDetailsView()
                 .presentationDetents([
                     .height(200),
                     .medium])
+        }
+    }
+    
+    func signOutUser() {
+        signOutProcessing = true
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+            signOutProcessing = false
+        }
+        withAnimation {
+            viewRouter.currentPage = .signInPage
         }
     }
 }

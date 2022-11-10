@@ -17,6 +17,7 @@ struct SignUpView: View {
     @State private var passwordConfirmation = ""
     
     @State private var signUpProcessing = false
+    @State private var signUpErrorMessage = ""
     
     var body: some View {
         VStack(spacing: 15) {
@@ -33,6 +34,13 @@ struct SignUpView: View {
                     .cornerRadius(10)
             }
             .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
+            if signUpProcessing {
+                ProgressView()
+            }
+            if !signUpErrorMessage.isEmpty {
+                Text("Failed creating account: \(signUpErrorMessage)")
+                    .foregroundColor(.red)
+            }
             Spacer()
             HStack {
                 Text("Already have an account?")
@@ -52,6 +60,7 @@ struct SignUpView: View {
         signUpProcessing = true
         Auth.auth().createUser(withEmail: userEmail, password: userPassword) { authResult, error in
             guard error == nil else {
+                signUpErrorMessage = error!.localizedDescription
                 signUpProcessing = false
                 return
             }
