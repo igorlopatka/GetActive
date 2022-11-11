@@ -14,6 +14,7 @@
 		450045F72912FC6000D9BDEC /* GetActiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450045F62912FC6000D9BDEC /* GetActiveTests.swift */; };
 		450046012912FC6000D9BDEC /* GetActiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450046002912FC6000D9BDEC /* GetActiveUITests.swift */; };
 		450046032912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450046022912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift */; };
+		453FDD21291EC4EA00E24264 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453FDD20291EC4EA00E24264 /* TimerManager.swift */; };
 		4576A07229198D9E0008FDF9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576A07129198D9E0008FDF9 /* LocationManager.swift */; };
 		45A19DB12919537600771F33 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A19DB02919537600771F33 /* ActivityView.swift */; };
 		45A19DB42919550300771F33 /* ActivityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A19DB32919550300771F33 /* ActivityDetailsView.swift */; };
@@ -65,6 +66,7 @@
 		450045FC2912FC6000D9BDEC /* GetActiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetActiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450046002912FC6000D9BDEC /* GetActiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActiveUITests.swift; sourceTree = "<group>"; };
 		450046022912FC6000D9BDEC /* GetActiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		453FDD20291EC4EA00E24264 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		4576A07129198D9E0008FDF9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4576A07329198E7D0008FDF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		45A19DB02919537600771F33 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
@@ -133,7 +135,7 @@
 				4576A07329198E7D0008FDF9 /* Info.plist */,
 				450045E52912FC5F00D9BDEC /* GetActiveApp.swift */,
 				4576A07129198D9E0008FDF9 /* LocationManager.swift */,
-				45ACB89F291C36D6007A75F4 /* ViewRouter.swift */,
+				453FDD20291EC4EA00E24264 /* TimerManager.swift */,
 				45A19DB2291953B500771F33 /* Views */,
 				450045E92912FC6000D9BDEC /* Assets.xcassets */,
 				450045EB2912FC6000D9BDEC /* Preview Content */,
@@ -169,6 +171,7 @@
 		45A19DB2291953B500771F33 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45ACB89F291C36D6007A75F4 /* ViewRouter.swift */,
 				450045E72912FC5F00D9BDEC /* ContentView.swift */,
 				45A19DB02919537600771F33 /* ActivityView.swift */,
 				45A19DB32919550300771F33 /* ActivityDetailsView.swift */,
@@ -331,6 +334,7 @@
 				4576A07229198D9E0008FDF9 /* LocationManager.swift in Sources */,
 				45A19DBA2919566100771F33 /* ActivityHistoryView.swift in Sources */,
 				45A19DB42919550300771F33 /* ActivityDetailsView.swift in Sources */,
+				453FDD21291EC4EA00E24264 /* TimerManager.swift in Sources */,
 				45ACB8A4291C380B007A75F4 /* SignInView.swift in Sources */,
 				45A19DB12919537600771F33 /* ActivityView.swift in Sources */,
 			);
