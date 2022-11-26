@@ -22,10 +22,7 @@ struct ActivityView: View {
     
     var body: some View {
         NavigationStack {
-            Map(coordinateRegion: $locationManager.region,
-                interactionModes: .pan,
-                showsUserLocation: true,
-                userTrackingMode: $trackingMode)
+            MapView(region: locationManager.region)
             .ignoresSafeArea()
             .navigationTitle("Get Active")
             .toolbar {

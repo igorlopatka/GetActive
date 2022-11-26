@@ -32,7 +32,6 @@ class TimerManager: ObservableObject {
     }
     
     func stop() {
-        
         if mode != .stopped {
             timer.invalidate()
             counter = 0
