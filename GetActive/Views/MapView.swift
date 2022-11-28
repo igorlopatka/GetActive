@@ -10,19 +10,27 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
-    let region: MKCoordinateRegion
-    //  let lineCoordinates: [CLLocation]
+    var locationManager = CLLocationManager()
+    
+    func setupManager() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+    }
     
     func makeUIView(context: Context) -> MKMapView {
-        let mapView = MKMapView()
-        mapView.delegate = context.coordinator
-        mapView.region = region
+        
+        setupManager()
+        let mapView = MKMapView(frame: UIScreen.main.bounds)
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
         return mapView
     }
     
-    func updateUIView(_ view: MKMapView, context: Context) {}
+    func updateUIView(_ view: MKMapView, context: Context) {
+    }
     
-    // Link it to the coordinator which is defined below.
+    
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }

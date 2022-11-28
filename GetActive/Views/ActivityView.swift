@@ -11,18 +11,18 @@ import SwiftUI
 
 
 struct ActivityView: View {
-    
+        
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State private var showingDetails = true
     @State private var trackingMode = MapUserTrackingMode.follow
-    @StateObject var locationManager = LocationManager()
+//    @StateObject var locationManager = LocationManager()
     
     @State private var signOutProcessing = false
     
     var body: some View {
         NavigationStack {
-            MapView(region: locationManager.region)
+            MapView()
             .ignoresSafeArea()
             .navigationTitle("Get Active")
             .toolbar {
