@@ -12,7 +12,7 @@ import SwiftUI
 
 struct ActivityView: View {
         
-    @ObservedObject var vm = ActivityViewModel()
+    @StateObject var vm = ActivityViewModel()
     
     @EnvironmentObject var viewRouter: ViewRouter
     
@@ -21,7 +21,7 @@ struct ActivityView: View {
     
     var body: some View {
         NavigationStack {
-            MapView()
+            MapView(vm: vm)
             .ignoresSafeArea()
             .navigationTitle("Get Active")
             .toolbar {

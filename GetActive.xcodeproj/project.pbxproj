@@ -36,7 +36,7 @@
 		45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
 		45ACB8A9291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
 		45ACB8AA291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
-		45F79A602934FC5500EF5700 /* ActivityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79A5F2934FC5500EF5700 /* ActivityDetailsViewModel.swift */; };
+		45F79A602934FC5500EF5700 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79A5F2934FC5500EF5700 /* ActivityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,7 @@
 		45ACB89F291C36D6007A75F4 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		45ACB8A3291C380B007A75F4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		45ACB8A7291C3818007A75F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		45F79A5F2934FC5500EF5700 /* ActivityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewModel.swift; sourceTree = "<group>"; };
+		45F79A5F2934FC5500EF5700 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +191,8 @@
 		45A19DB2291953B500771F33 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				459FDAAC293242FF00A0E7DB /* MapView.swift */,
 				450045E72912FC5F00D9BDEC /* ContentView.swift */,
+				459FDAAC293242FF00A0E7DB /* MapView.swift */,
 				45A19DB02919537600771F33 /* ActivityView.swift */,
 				45A19DB32919550300771F33 /* ActivityDetailsView.swift */,
 				45A19DB92919566100771F33 /* ActivityHistoryView.swift */,
@@ -206,7 +206,7 @@
 		45F79A622934FCB700EF5700 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				45F79A5F2934FC5500EF5700 /* ActivityDetailsViewModel.swift */,
+				45F79A5F2934FC5500EF5700 /* ActivityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 			files = (
 				45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */,
 				45ACB8A0291C36D6007A75F4 /* ViewRouter.swift in Sources */,
-				45F79A602934FC5500EF5700 /* ActivityDetailsViewModel.swift in Sources */,
+				45F79A602934FC5500EF5700 /* ActivityViewModel.swift in Sources */,
 				450045E82912FC5F00D9BDEC /* ContentView.swift in Sources */,
 				450045E62912FC5F00D9BDEC /* GetActiveApp.swift in Sources */,
 				459FDAAD293242FF00A0E7DB /* MapView.swift in Sources */,

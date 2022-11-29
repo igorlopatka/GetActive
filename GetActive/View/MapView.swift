@@ -10,25 +10,14 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
-    var region = MKCoordinateRegion()
-//    var locationManager = CLLocationManager()
-    @ObservedObject var vm = ActivityViewModel()
+    @ObservedObject var vm: ActivityViewModel
     
     func setupManager() {
-        vm.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        vm.locationManager.requestWhenInUseAuthorization()
-        vm.locationManager.startUpdatingLocation()
+        vm.location.desiredAccuracy = kCLLocationAccuracyBest
+        vm.location.requestWhenInUseAuthorization()
+        vm.location.startUpdatingLocation()
     }
     
-    mutating func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locations.last.map {
-            region = MKCoordinateRegion(
-                center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
-                span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-            )
-        }
-    }
-
     func makeUIView(context: Context) -> MKMapView {
         setupManager()
         let mapView = MKMapView(frame: UIScreen.main.bounds)
