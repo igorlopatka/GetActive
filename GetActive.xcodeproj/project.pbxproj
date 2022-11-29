@@ -36,6 +36,7 @@
 		45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
 		45ACB8A9291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
 		45ACB8AA291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
+		45F79A602934FC5500EF5700 /* ActivityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F79A5F2934FC5500EF5700 /* ActivityDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		45ACB89F291C36D6007A75F4 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		45ACB8A3291C380B007A75F4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		45ACB8A7291C3818007A75F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		45F79A5F2934FC5500EF5700 /* ActivityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +137,9 @@
 				4576A07329198E7D0008FDF9 /* Info.plist */,
 				450045E52912FC5F00D9BDEC /* GetActiveApp.swift */,
 				453FDD20291EC4EA00E24264 /* TimerManager.swift */,
-				45A19DB2291953B500771F33 /* Views */,
+				45A19DB2291953B500771F33 /* View */,
+				45F79A622934FCB700EF5700 /* ViewModel */,
+				455411462935099000F9B7BA /* Helper */,
 				450045E92912FC6000D9BDEC /* Assets.xcassets */,
 				450045EB2912FC6000D9BDEC /* Preview Content */,
 			);
@@ -167,21 +171,44 @@
 			path = GetActiveUITests;
 			sourceTree = "<group>";
 		};
-		45A19DB2291953B500771F33 /* Views */ = {
+		455411462935099000F9B7BA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				45ACB89F291C36D6007A75F4 /* ViewRouter.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		45541147293509C500F9B7BA /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				45ACB8A3291C380B007A75F4 /* SignInView.swift */,
+				45ACB8A7291C3818007A75F4 /* SignUpView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		45A19DB2291953B500771F33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				459FDAAC293242FF00A0E7DB /* MapView.swift */,
 				450045E72912FC5F00D9BDEC /* ContentView.swift */,
 				45A19DB02919537600771F33 /* ActivityView.swift */,
 				45A19DB32919550300771F33 /* ActivityDetailsView.swift */,
 				45A19DB92919566100771F33 /* ActivityHistoryView.swift */,
 				45A19DB72919565100771F33 /* SettingsView.swift */,
 				45A19DB52919564800771F33 /* ProfileView.swift */,
-				45ACB8A3291C380B007A75F4 /* SignInView.swift */,
-				45ACB8A7291C3818007A75F4 /* SignUpView.swift */,
-				459FDAAC293242FF00A0E7DB /* MapView.swift */,
+				45541147293509C500F9B7BA /* Authentication */,
 			);
-			path = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		45F79A622934FCB700EF5700 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				45F79A5F2934FC5500EF5700 /* ActivityDetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +354,7 @@
 			files = (
 				45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */,
 				45ACB8A0291C36D6007A75F4 /* ViewRouter.swift in Sources */,
+				45F79A602934FC5500EF5700 /* ActivityDetailsViewModel.swift in Sources */,
 				450045E82912FC5F00D9BDEC /* ContentView.swift in Sources */,
 				450045E62912FC5F00D9BDEC /* GetActiveApp.swift in Sources */,
 				459FDAAD293242FF00A0E7DB /* MapView.swift in Sources */,

@@ -12,6 +12,8 @@ import SwiftUI
 
 struct ActivityView: View {
         
+    @ObservedObject var vm = ActivityViewModel()
+    
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State private var showingDetails = true

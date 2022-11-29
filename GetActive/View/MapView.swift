@@ -11,12 +11,13 @@ import MapKit
 struct MapView: UIViewRepresentable {
     
     var region = MKCoordinateRegion()
-    var locationManager = CLLocationManager()
+//    var locationManager = CLLocationManager()
+    @ObservedObject var vm = ActivityViewModel()
     
     func setupManager() {
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        vm.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        vm.locationManager.requestWhenInUseAuthorization()
+        vm.locationManager.startUpdatingLocation()
     }
     
     mutating func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -28,12 +29,11 @@ struct MapView: UIViewRepresentable {
         }
     }
 
-    
     func makeUIView(context: Context) -> MKMapView {
-        
         setupManager()
         let mapView = MKMapView(frame: UIScreen.main.bounds)
         mapView.showsUserLocation = true
+        mapView.isUserInteractionEnabled = false
         mapView.userTrackingMode = .follow
         return mapView
     }
