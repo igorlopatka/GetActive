@@ -12,14 +12,7 @@ struct MapView: UIViewRepresentable {
     
     @ObservedObject var vm: ActivityViewModel
     
-    func setupManager() {
-        vm.location.desiredAccuracy = kCLLocationAccuracyBest
-        vm.location.requestWhenInUseAuthorization()
-        vm.location.startUpdatingLocation()
-    }
-    
     func makeUIView(context: Context) -> MKMapView {
-        setupManager()
         let mapView = MKMapView(frame: UIScreen.main.bounds)
         mapView.showsUserLocation = true
         mapView.isUserInteractionEnabled = false
@@ -28,6 +21,7 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
+        
     }
     
     
