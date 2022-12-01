@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ActivityDetailsView: View {
     
-    
+    @ObservedObject var vm: ActivityViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Toggle("is Active", isOn: $vm.isActive)
     }
 }
 
 struct ActivityDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityDetailsView()
+        ActivityDetailsView(vm: ActivityViewModel())
     }
 }

@@ -11,9 +11,9 @@ import MapKit
 
 class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    @Published var isActive = false
+    @Published var isActive = true
     @Published var timer = TimerManager()
-    @Published var locationData = [CLLocation]()
+    @Published var locationData = [CLLocationCoordinate2D]()
     @Published var region = MKCoordinateRegion()
     
     
@@ -31,11 +31,12 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locations.last.map {
-            region = MKCoordinateRegion(
-                center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
-                span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-            )
-            print(locations)
+            
+            let location = CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude)
+            
+            if isActive {
+                locationData.append(location)
+            }
         }
     }
 }

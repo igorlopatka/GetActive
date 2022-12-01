@@ -37,7 +37,7 @@ struct ActivityView: View {
             }
         }
         .sheet(isPresented: $showingDetails) {
-            ActivityDetailsView()
+            ActivityDetailsView(vm: vm)
                 .presentationDetents([
                     .height(200),
                     .medium])
