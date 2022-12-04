@@ -16,7 +16,6 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var locationData = [CLLocationCoordinate2D]()
     @Published var region = MKCoordinateRegion()
     
-    
     var locationManager: CLLocationManager
     
     override init() {
@@ -28,12 +27,9 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locations.last.map {
-            
             let location = CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude)
-            
             if isActive {
                 locationData.append(location)
             }

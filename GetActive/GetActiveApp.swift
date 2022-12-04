@@ -12,7 +12,6 @@ import SwiftUI
 @main
 struct GetActiveApp: App {
     
-    
     @StateObject var viewRouter = ViewRouter()
     
     init() {

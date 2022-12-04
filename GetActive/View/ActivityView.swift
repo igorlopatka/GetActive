@@ -21,7 +21,7 @@ struct ActivityView: View {
     
     var body: some View {
         NavigationStack {
-            MapView(vm: vm)
+            MapView(locationData: $vm.locationData)
             .ignoresSafeArea()
             .navigationTitle("Get Active")
             .toolbar {
