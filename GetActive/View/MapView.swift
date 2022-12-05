@@ -14,6 +14,7 @@ struct MapView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView(frame: UIScreen.main.bounds)
+        mapView.delegate = context.coordinator
         mapView.showsUserLocation = true
         mapView.isUserInteractionEnabled = false
         mapView.userTrackingMode = .follow
@@ -40,7 +41,7 @@ class Coordinator: NSObject, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if let routePolyline = overlay as? MKPolyline {
             let renderer = MKPolylineRenderer(polyline: routePolyline)
-            renderer.strokeColor = UIColor.red.withAlphaComponent(0.9)
+            renderer.strokeColor = UIColor.systemBlue
             renderer.lineWidth = 7
             return renderer
         }
