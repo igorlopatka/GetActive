@@ -21,26 +21,26 @@ struct ActivityView: View {
     
     var body: some View {
         NavigationStack {
-            MapView(locationData: $vm.locationData)
-            .ignoresSafeArea()
-            .navigationTitle("Get Active")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    if signOutProcessing {
-                        ProgressView()
-                    } else {
-                        Button("Sign Out") {
-                            signOutUser()
+            GeometryReader { geo in
+                VStack {
+                    MapView(locationData: $vm.locationData)
+                    .ignoresSafeArea()
+                    .navigationTitle("Get Active")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            if signOutProcessing {
+                                ProgressView()
+                            } else {
+                                Button("Sign Out") {
+                                    signOutUser()
+                                }
+                            }
                         }
                     }
+                    ActivityDetailsView(vm: vm)
+                        .frame(height: geo.size.height / 2)
                 }
             }
-        }
-        .sheet(isPresented: $showingDetails) {
-            ActivityDetailsView(vm: vm)
-                .presentationDetents([
-                    .height(200),
-                    .medium])
         }
     }
     
