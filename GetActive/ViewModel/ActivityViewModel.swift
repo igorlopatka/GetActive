@@ -50,18 +50,20 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func calculateDistance() {
         for location in 0..<locationData.count - 1 {
-                    let start = locationData[location]
-                    let end = locationData[location + 1]
-                    let distance = getDistance(from: start, to: end)
-                    totalDistance += distance
-                }
+            let start = locationData[location]
+            let end = locationData[location + 1]
+            let distance = getDistance(from: start, to: end)
+            totalDistance += distance
+        }
     }
     
     func getDistance(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> CLLocationDistance {
-            // By Aviel Gross
-            // https://stackoverflow.com/questions/11077425/finding-distance-between-cllocationcoordinate2d-points
-            let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
-            let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
-            return from.distance(from: to)
-        }
+        // By Aviel Gross
+        // https://stackoverflow.com/questions/11077425/finding-distance-between-cllocationcoordinate2d-points
+        let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
+        let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
+        return from.distance(from: to)
+    }
+    
+    
 }
