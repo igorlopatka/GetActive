@@ -37,6 +37,8 @@
 		45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
 		45ACB8A9291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
 		45ACB8AA291C3818007A75F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACB8A7291C3818007A75F4 /* SignUpView.swift */; };
+		45AD9ADB2950CA97007AAC57 /* SignInCredentialFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD9ADA2950CA97007AAC57 /* SignInCredentialFields.swift */; };
+		45AD9ADD2950CAB2007AAC57 /* SignUpCredentialFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD9ADC2950CAB2007AAC57 /* SignUpCredentialFields.swift */; };
 		45FB0E9229411D270097F836 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB0E9129411D270097F836 /* ActivityViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		45ACB89F291C36D6007A75F4 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		45ACB8A3291C380B007A75F4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		45ACB8A7291C3818007A75F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		45AD9ADA2950CA97007AAC57 /* SignInCredentialFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCredentialFields.swift; sourceTree = "<group>"; };
+		45AD9ADC2950CAB2007AAC57 /* SignUpCredentialFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCredentialFields.swift; sourceTree = "<group>"; };
 		45FB0E9129411D270097F836 /* ActivityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +191,8 @@
 			children = (
 				45ACB8A3291C380B007A75F4 /* SignInView.swift */,
 				45ACB8A7291C3818007A75F4 /* SignUpView.swift */,
+				45AD9ADA2950CA97007AAC57 /* SignInCredentialFields.swift */,
+				45AD9ADC2950CAB2007AAC57 /* SignUpCredentialFields.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AD9ADB2950CA97007AAC57 /* SignInCredentialFields.swift in Sources */,
 				45ACB8A8291C3818007A75F4 /* SignUpView.swift in Sources */,
 				45ACB8A0291C36D6007A75F4 /* ViewRouter.swift in Sources */,
 				450045E82912FC5F00D9BDEC /* ContentView.swift in Sources */,
@@ -369,6 +376,7 @@
 				453FDD21291EC4EA00E24264 /* TimerManager.swift in Sources */,
 				45ACB8A4291C380B007A75F4 /* SignInView.swift in Sources */,
 				45A19DB12919537600771F33 /* ActivityView.swift in Sources */,
+				45AD9ADD2950CAB2007AAC57 /* SignUpCredentialFields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

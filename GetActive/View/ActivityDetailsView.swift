@@ -12,7 +12,14 @@ struct ActivityDetailsView: View {
     @ObservedObject var vm: ActivityViewModel
     
     var body: some View {
-        Toggle("is Active", isOn: $vm.isActive)
+        VStack {
+            Toggle("is Active", isOn: $vm.isActive)
+            Text("Current speed: ")
+            Text("Current tempo: ")
+            Text("Distance: ")
+            Text("Burned kcal: ")
+        }
+        
     }
 }
 

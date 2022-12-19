@@ -9,14 +9,12 @@ import Firebase
 import MapKit
 import SwiftUI
 
-
 struct ActivityView: View {
         
     @StateObject var vm = ActivityViewModel()
     
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @State private var showingDetails = true
     @State private var signOutProcessing = false
     
     var body: some View {
@@ -38,7 +36,7 @@ struct ActivityView: View {
                         }
                     }
                     ActivityDetailsView(vm: vm)
-                        .frame(height: geo.size.height / 2)
+                        .frame(height: geo.size.height / 2.4)
                 }
             }
         }
