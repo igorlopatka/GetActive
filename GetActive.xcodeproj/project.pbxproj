@@ -142,7 +142,6 @@
 				45ACB894291C320A007A75F4 /* GoogleService-Info.plist */,
 				4576A07329198E7D0008FDF9 /* Info.plist */,
 				450045E52912FC5F00D9BDEC /* GetActiveApp.swift */,
-				453FDD20291EC4EA00E24264 /* TimerManager.swift */,
 				45A19DB2291953B500771F33 /* View */,
 				45F79A622934FCB700EF5700 /* ViewModel */,
 				455411462935099000F9B7BA /* Helper */,
@@ -180,6 +179,7 @@
 		455411462935099000F9B7BA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				453FDD20291EC4EA00E24264 /* TimerManager.swift */,
 				45ACB89F291C36D6007A75F4 /* ViewRouter.swift */,
 				4549D4EA294A76AB00A7F091 /* Unit.swift */,
 			);

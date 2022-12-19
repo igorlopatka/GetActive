@@ -14,7 +14,7 @@ struct ActivityDetailsView: View {
     var body: some View {
         VStack {
             Toggle("is Active", isOn: $vm.isActive)
-            Text("Current speed: ")
+            Text("Current speed: \(String(format: "%.2f", vm.speed * 3.6)) km/h")
             Text("Current tempo: ")
             Text("Distance: ")
             Text("Burned kcal: ")

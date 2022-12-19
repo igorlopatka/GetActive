@@ -21,6 +21,7 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var locationData = [CLLocationCoordinate2D]()
     @Published var region = MKCoordinateRegion()
+    @Published var lastLocation: CLLocation?
     
     var locationManager: CLLocationManager
     
@@ -33,9 +34,16 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    var speed: Double {
+        let speedMS = lastLocation?.speed ?? 0
+        let speedDouble = Double(speedMS)
+        return speedDouble
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locations.last.map {
             let location = CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude)
+            lastLocation = $0
             collectLocationData(location: location)
         }
     }
