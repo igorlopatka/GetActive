@@ -85,23 +85,3 @@ struct LoginView_Previews: PreviewProvider {
     }
 }
 
-struct SignInCredentialFields: View {
-    
-    @Binding var email: String
-    @Binding var password: String
-    
-    var body: some View {
-        Group {
-            TextField("Email", text: $email)
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(10)
-                .textInputAutocapitalization(.never)
-            SecureField("Password", text: $password)
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(10)
-                .padding(.bottom, 30)
-        }
-    }
-}
