@@ -40,6 +40,18 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         return speedDouble
     }
     
+    var speedKMH: String {
+        let kmh = speed * 3.6
+        let formatted = String(format: "%.2f", kmh)
+        return formatted
+    }
+    
+    var distanceM: String {
+        let inMeters = totalDistance
+        let formatted = String(format: "%.0f", inMeters)
+        return formatted
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locations.last.map {
             let location = CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude)
@@ -72,6 +84,4 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
         return from.distance(from: to)
     }
-    
-    
 }
