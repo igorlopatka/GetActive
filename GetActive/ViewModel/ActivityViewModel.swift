@@ -18,7 +18,6 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var totalDistance = 0.0
     
-    
     @Published var locationData = [CLLocationCoordinate2D]()
     @Published var region = MKCoordinateRegion()
     @Published var lastLocation: CLLocation?
@@ -64,14 +63,14 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         if isActive {
             locationData.append(location)
             calculateDistance()
-            print(totalDistance)
         }
     }
     
     func calculateDistance() {
-        for location in 0..<locationData.count - 1 {
-            let start = locationData[location]
-            let end = locationData[location + 1]
+
+        if locationData.count > 1 {
+            let start = locationData[locationData.count - 2]
+            let end = locationData[locationData.count - 1]
             let distance = getDistance(from: start, to: end)
             totalDistance += distance
         }
