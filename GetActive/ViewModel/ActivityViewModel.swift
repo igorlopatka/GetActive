@@ -40,16 +40,19 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     var speedKMH: String {
+        // Speed in kilometers
         let kmh = speed * 3.6
         let formatted = String(format: "%.2f", kmh)
         return formatted
     }
     
     var distanceM: String {
+        // Distance in meters
         let inMeters = totalDistance
         let formatted = String(format: "%.0f", inMeters)
         return formatted
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locations.last.map {
@@ -67,7 +70,6 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func calculateDistance() {
-
         if locationData.count > 1 {
             let start = locationData[locationData.count - 2]
             let end = locationData[locationData.count - 1]
@@ -77,7 +79,6 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func getDistance(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> CLLocationDistance {
-        // By Aviel Gross
         // https://stackoverflow.com/questions/11077425/finding-distance-between-cllocationcoordinate2d-points
         let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
         let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
