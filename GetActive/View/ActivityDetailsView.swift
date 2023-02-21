@@ -13,14 +13,21 @@ struct ActivityDetailsView: View {
     
     var body: some View {
         VStack {
-            Toggle("is Active", isOn: $vm.isActive)
+            HStack {
+                
+                Button(vm.isActive ? "Pause" : "Stop") {
+                    vm.isActive.toggle()
+                }
+                
+                Button(vm.isActive ? "Resume" : "Start") {
+                    vm.isActive.toggle()
+
+                }
+                
+            }
             Text("Current speed: \(vm.speedKMH) km/h")
             Text("Distance: \(vm.distanceM) m")
-            Text("Current tempo: ")
-            
-            Text("Burned kcal: ")
         }
-        
     }
 }
 
