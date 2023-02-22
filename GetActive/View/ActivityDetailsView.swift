@@ -15,15 +15,13 @@ struct ActivityDetailsView: View {
         VStack {
             HStack {
                 
-                Button(vm.isActive ? "Pause" : "Stop") {
-                    vm.isActive.toggle()
+                Button(vm.isPaused ? "Resume" : "Pause") {
+                    vm.isPaused.toggle()
                 }
                 
-                Button(vm.isActive ? "Resume" : "Start") {
+                Button(vm.isActive ? "Finish" : "Start") {
                     vm.isActive.toggle()
-
                 }
-                
             }
             Text("Current speed: \(vm.speedKMH) km/h")
             Text("Distance: \(vm.distanceM) m")
