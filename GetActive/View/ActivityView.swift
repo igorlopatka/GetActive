@@ -35,7 +35,7 @@ struct ActivityView: View {
                             }
                         }
                     }
-                    ActivityDetailsView(vm: vm)
+                    ActivityDetailsView(vm: vm, timer: vm.timer)
                         .frame(height: geo.size.height / 2.4)
                 }
             }

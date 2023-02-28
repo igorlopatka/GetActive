@@ -47,6 +47,9 @@ class ActivityViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         if isActive {
             locationData.append(location)
             calculateDistance()
+            timer.start()
+        } else {
+            timer.pause()
         }
     }
     

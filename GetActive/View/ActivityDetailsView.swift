@@ -10,7 +10,8 @@ import SwiftUI
 struct ActivityDetailsView: View {
     
     @ObservedObject var vm: ActivityViewModel
-    
+    @ObservedObject var timer: TimerManager
+
     var body: some View {
         VStack {
             HStack {
@@ -25,12 +26,13 @@ struct ActivityDetailsView: View {
             }
             Text("Current speed: \(vm.speedKMH) km/h")
             Text("Distance: \(vm.distanceM) m")
+            Text("Time: \(String(format: "%.2f", timer.counter)) s")
         }
     }
 }
 
 struct ActivityDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityDetailsView(vm: ActivityViewModel())
+        ActivityDetailsView(vm: ActivityViewModel(), timer: TimerManager())
     }
 }
